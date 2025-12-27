@@ -52,6 +52,10 @@
 }
 
 .address-heading-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -165,10 +169,6 @@
   }
 
   .blog-heading-text-div {
-    margin-top: 40px;
-  }
-
-  .address-heading-text-div {
     margin-top: 40px;
   }
 

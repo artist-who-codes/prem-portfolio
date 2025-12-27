@@ -2,12 +2,19 @@ import React, { Component } from "react";
 import "./ExperienceCard.css";
 import { Fade } from "react-reveal";
 
+const images = require.context(
+  "../../assets/images",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
 class ExperienceCard extends Component {
   render() {
     const experience = this.props.experience;
     const index = this.props.index;
     const totalCards = this.props.totalCards;
     const theme = this.props.theme;
+    console.log(experience, "exp");
     return (
       <div
         className="experience-list-item"
@@ -15,11 +22,22 @@ class ExperienceCard extends Component {
       >
         <Fade left duration={2000} distance="40px">
           <div className="experience-card-logo-div">
-            <img
-              className="experience-card-logo"
-              src={require(`../../assets/images/${experience["logo_path"]}`)}
-              alt=""
-            />
+            {(() => {
+              let logoSrc;
+              try {
+                logoSrc = images(`./${experience.logo_path}`);
+                if (logoSrc && logoSrc.default) logoSrc = logoSrc.default;
+              } catch (err) {
+                logoSrc = `${process.env.PUBLIC_URL}/assets/images/placeholder.png`;
+              }
+              return (
+                <img
+                  className="experience-card-logo"
+                  src={logoSrc}
+                  alt={experience.company || "logo"}
+                />
+              );
+            })()}
           </div>
         </Fade>
         <div className="experience-card-stepper">

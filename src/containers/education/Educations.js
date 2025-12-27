@@ -17,7 +17,7 @@ class Educations extends Component {
           </Fade>
         </div>
         <div className="educations-body-div">
-          {degrees.degrees.map((degree) => {
+          {degrees.degrees.map((degree, key) => {
             return <DegreeCard degree={degree} theme={theme} />;
           })}
         </div>

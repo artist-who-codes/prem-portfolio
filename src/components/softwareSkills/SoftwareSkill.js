@@ -2,19 +2,18 @@ import React from "react";
 import "./SoftwareSkill.css";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
+const images = require.context(
+  "../../assets/images",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
 class SoftwareSkill extends React.Component {
   render() {
     return (
       <div>
         <div className="software-skills-main-div">
           <ul className="dev-icons">
-            {/* {skillsSection.softwareSkills.map(skills => {
-            return (
-              <li className="software-skill-inline" name={skills.skillName}>
-                <i className={skills.fontAwesomeClassname}></i>
-              </li>
-            );
-          })} */}
             {this.props.logos.map((logo) => {
               return (
                 <OverlayTrigger
@@ -35,14 +34,26 @@ class SoftwareSkill extends React.Component {
                         data-inline="false"
                       ></span>
                     )}
-                    {!logo.fontAwesomeClassname && logo.imageSrc && (
-                      <img
-                        className="skill-image"
-                        style={logo.style}
-                        src={`${process.env.PUBLIC_URL}/skills/${logo.imageSrc}`}
-                        alt={logo.skillName}
-                      />
-                    )}
+
+                    {!logo.fontAwesomeClassname &&
+                      logo.imageSrc &&
+                      (() => {
+                        let imgSrc;
+                        try {
+                          const mod = images(`./${logo.imageSrc}`);
+                          imgSrc = mod && mod.default ? mod.default : mod;
+                        } catch (err) {
+                          imgSrc = `${process.env.PUBLIC_URL}/skills/${logo.imageSrc}`;
+                        }
+                        return (
+                          <img
+                            className="skill-image"
+                            style={logo.style}
+                            src={imgSrc}
+                            alt={logo.skillName}
+                          />
+                        );
+                      })()}
                   </li>
                 </OverlayTrigger>
               );

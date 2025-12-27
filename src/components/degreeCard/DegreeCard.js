@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import "./DegreeCard.css";
 import { Fade, Flip } from "react-reveal";
 
+const images = require.context(
+  "../../assets/images",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
 class DegreeCard extends Component {
   render() {
     const degree = this.props.degree;
@@ -11,15 +17,26 @@ class DegreeCard extends Component {
         {degree.logo_path && (
           <Flip left duration={2000}>
             <div className="card-img">
-              <img
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                  transform: "scale(0.9)",
-                }}
-                src={require(`../../assets/images/${degree.logo_path}`)}
-                alt={degree.alt_name}
-              />
+              {(() => {
+                let logoSrc;
+                try {
+                  logoSrc = images(`./${degree.logo_path}`);
+                  if (logoSrc && logoSrc.default) logoSrc = logoSrc.default;
+                } catch (err) {
+                  logoSrc = `${process.env.PUBLIC_URL}/assets/images/placeholder.png`;
+                }
+                return (
+                  <img
+                    style={{
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                      transform: "scale(0.9)",
+                    }}
+                    src={logoSrc}
+                    alt={degree.alt_name}
+                  />
+                );
+              })()}
             </div>
           </Flip>
         )}

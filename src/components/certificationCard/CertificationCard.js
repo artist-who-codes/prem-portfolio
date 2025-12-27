@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import "./CertificationCard.css";
 import { Fade } from "react-reveal";
 
+const images = require.context(
+  "../../assets/images",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
 class CertificationCard extends Component {
   render() {
     const certificate = this.props.certificate;
@@ -20,11 +26,22 @@ class CertificationCard extends Component {
                 className="cert-header"
                 style={{ backgroundColor: certificate.color_code }}
               >
-                <img
-                  className="logo_img"
-                  src={require(`../../assets/images/${certificate.logo_path}`)}
-                  alt={certificate.alt_name}
-                />
+                {(() => {
+                  let logoSrc;
+                  try {
+                    logoSrc = images(`./${certificate.logo_path}`);
+                    if (logoSrc && logoSrc.default) logoSrc = logoSrc.default;
+                  } catch (err) {
+                    logoSrc = `${process.env.PUBLIC_URL}/assets/images/placeholder.png`;
+                  }
+                  return (
+                    <img
+                      className="logo_img"
+                      src={logoSrc}
+                      alt={certificate.alt_name}
+                    />
+                  );
+                })()}
               </div>
               <div className="content-details fadeIn-top">
                 <h3 className="content-title" style={{ color: theme.body }}>
