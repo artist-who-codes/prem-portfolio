@@ -101,7 +101,7 @@ const skills = {
         },
         {
           skillName: "INGENEO",
-          imageSrc: "INGENEO_Logo.png",
+          imageSrc: "INGENEO_logo.png",
         },
         {
           skillName: "EBP",
@@ -109,7 +109,7 @@ const skills = {
         },
         {
           skillName: "My Silae",
-          imageSrc: "MySilae_Logo.png",
+          imageSrc: "MySilae_logo.png",
         },
         {
           skillName: "SAP",
@@ -426,7 +426,7 @@ const certifications = {
 
 // Experience Page
 const experience = {
-  title: "Experience",
+  title: "Expérience",
   subtitle: "Stage , Alternance et Freelance",
   description:
     "Grâce à mes expériences en cabinet comptable, en entreprise et en mission freelance, je combine aujourd’hui une solide culture financière avec des compétences en data pour construire des reportings adaptés aux besoins terrain.",
@@ -574,7 +574,7 @@ const publications = {
 // Contact Page
 const contactPageData = {
   contactSection: {
-    title: "Contact Me",
+    title: "Contactez-moi",
     profile_image_path: "prem.png",
     description:
       "Je suis joignable par email, LinkedIn, YouTube, Instagram et GitHub et je réponds rapidement. J’aide sur la comptabilité, le contrôle de gestion, l’analyse de données (Python, SQL, Power BI, Excel) et la création de tableaux de bord de performance.",
