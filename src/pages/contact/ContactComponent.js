@@ -68,7 +68,7 @@ class Contact extends Component {
                 </p>
                 <div className="address-btn-div">
                   <Button
-                    text="Visit on Google Maps"
+                    text="Voir sur Google Maps"
                     newTab={true}
                     href={addressSection.location_map_link}
                     theme={theme}

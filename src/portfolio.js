@@ -581,7 +581,7 @@ const contactPageData = {
   },
 
   addressSection: {
-    title: "Address",
+    title: "Adresse",
     subtitle: "Sarcelles, Île-de-France, France",
     locality: "Sarcelles",
     country: "France",
