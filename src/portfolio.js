@@ -25,7 +25,7 @@ const greeting = {
   subTitle:
     "Alternant Data Analyst, avec un parcours solide en comptabilité, gestion et data, je transforme les données financières et opérationnelles en tableaux de bord clairs pour aider les entreprises à piloter leur activité.​Formé en BTS Comptabilité et Gestion puis en Licence Pro Comptabilité et Gestion, et actuellement en Bachelor Data Analyst, je relie le langage des chiffres (bilan, compte de résultat, trésorerie) aux outils modernes de la data (Python, SQL, Power BI, Excel avancé).",
   resumeLink:
-    "https://drive.google.com/file/d/10dGweyLY91wqlOamKZ33cQfbZ0t7RP3t/view?usp=sharing",
+    "https://drive.google.com/file/d/1zTjsRPert6zbG80eqLZBiWM_0TD--loI/view?usp=drivesdk",
 };
 
 const socialMediaLinks = [
