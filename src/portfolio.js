@@ -421,6 +421,24 @@ const certifications = {
       alt_name: "chatgpt",
       color_code: "#0e4f1b65",
     },
+    {
+      title: "n8n Course Level 1",
+      subtitle: "n8n Courses",
+      logo_path: "n8nIcon.svg",
+      certificate_link:
+        "https://community.n8n.io/badges/104/completed-n8n-course-level-1?username=premnaath",
+      alt_name: "n8n",
+      color_code: "#ebccd3",
+    },
+    {
+      title: "n8n Course Level 2",
+      subtitle: "n8n Courses",
+      logo_path: "n8nIcon.svg",
+      certificate_link:
+        "https://community.n8n.io/badges/105/completed-n8n-course-level-2?username=premnaath",
+      alt_name: "n8n",
+      color_code: "#ebccd3",
+    },
   ],
 };
 
