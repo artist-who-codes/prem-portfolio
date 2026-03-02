@@ -9,7 +9,7 @@ const settings = {
 const seo = {
   title: "Premnaath Portfolio",
   description:
-    "Alternant Data Analyst, avec un parcours solide en comptabilité, gestion et data, je transforme les données financières et opérationnelles en tableaux de bord clairs pour aider les entreprises à piloter leur activité.​Formé en BTS Comptabilité et Gestion puis en Licence Pro Comptabilité et Gestion, et actuellement en Bachelor Data Analyst, je relie le langage des chiffres (bilan, compte de résultat, trésorerie) aux outils modernes de la data (Python, SQL, Power BI, Excel avancé).",
+    "Avec une solide formation en comptabilité, gestion et analyse de données, je transforme les données financières et opérationnelles en tableaux de bord clairs et exploitables, au service de la performance des entreprises. Diplômé d’un BTS Comptabilité et Gestion puis d’une Licence Professionnelle en Comptabilité et Gestion, complétés par une formation de 6 mois en Data Analysis, je fais le lien entre les fondamentaux financiers (bilan, compte de résultat, trésorerie) et les outils modernes de la data (Python, SQL, Power BI, Excel avancé).",
   og: {
     title: "Premnaath Canagou Portfolio",
     type: "website",
@@ -23,9 +23,9 @@ const greeting = {
   logo_name: "Premnaath Canagou",
   nickname: "Comptable & Data Analyst",
   subTitle:
-    "Alternant Data Analyst, avec un parcours solide en comptabilité, gestion et data, je transforme les données financières et opérationnelles en tableaux de bord clairs pour aider les entreprises à piloter leur activité.​Formé en BTS Comptabilité et Gestion puis en Licence Pro Comptabilité et Gestion, et actuellement en Bachelor Data Analyst, je relie le langage des chiffres (bilan, compte de résultat, trésorerie) aux outils modernes de la data (Python, SQL, Power BI, Excel avancé).",
+    "Avec une solide formation en comptabilité, gestion et analyse de données, je transforme les données financières et opérationnelles en tableaux de bord clairs et exploitables, au service de la performance des entreprises. Diplômé d’un BTS Comptabilité et Gestion puis d’une Licence Professionnelle en Comptabilité et Gestion, complétés par une formation de 6 mois en Data Analysis, je fais le lien entre les fondamentaux financiers (bilan, compte de résultat, trésorerie) et les outils modernes de la data (Python, SQL, Power BI, Excel avancé).",
   resumeLink:
-    "https://drive.google.com/file/d/1zTjsRPert6zbG80eqLZBiWM_0TD--loI/view?usp=drivesdk",
+    "https://drive.google.com/file/d/13H5ASU21RPKL_ideK43jdkpJWjgsqyIJ/view",
 };
 
 const socialMediaLinks = [
@@ -288,7 +288,7 @@ const degrees = {
   degrees: [
     {
       title: "ENESIA School of Data and Artificial Intelligence - Paris 8",
-      subtitle: "Bachelor Data Analyst",
+      subtitle: "Bachelor Data Analyst (Premier semestre validé - 15,20)",
       logo_path: "enesia.png",
       alt_name: "ENESIA",
       duration: "2025 - 2026",
@@ -429,6 +429,15 @@ const certifications = {
         "https://community.n8n.io/badges/104/completed-n8n-course-level-1?username=premnaath",
       alt_name: "n8n",
       color_code: "#ebccd3",
+    },
+    {
+      title: "Enesia",
+      subtitle: "Enesia Learning",
+      logo_path: "enesia.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1X3_LnUbQ2GDlA80D07o9wL9LoZEYQjLV/view",
+      alt_name: "enesia",
+      color_code: "#6ee16f2c",
     },
     {
       title: "n8n Course Level 2",
